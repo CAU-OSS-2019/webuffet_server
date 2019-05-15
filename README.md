@@ -1,4 +1,4 @@
-![Getting started](./img/webuffet_banner.png)  
+![Getting started](./img/webuffet_market_banner.png)  
   
   
 # [WEBuffet](https://github.com/CAU-OSS-2019/webuffet) API server
