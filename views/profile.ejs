@@ -56,9 +56,8 @@
 							<br>
 		                    <p>
 		                        <strong>아이디</strong>: <%= user.google.id %><br><br>
-								<strong>이메일</strong>: <%= user.google.email %><br><br>
-								<strong>닉네임</strong>: <%= user.google.nickname %><br><br>
-		                        <strong>이름</strong>: <%= user.google.name %>
+								<strong>이메일</strong>: <%= user.google.emails[0].value %><br><br>
+		                        <strong>이름</strong>: <%= user.google.name.givenName %>
 		                    </p>
 						<% } %>
 		                	
