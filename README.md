@@ -9,6 +9,6 @@
   - User can conveniently login to our server.
   - Server recognize users, so we can save and load user data.  
 
-- API for theme community
+- API for theme market
   - User can save theme to server. It can help to immediately use saved theme in another pc/laptop.  
   - Users can check, evaluate, and download themes uploaded by another users.
