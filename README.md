@@ -1,6 +1,7 @@
-![Getting started](./img/webuffet_banner.png)
-
-**API server** for [web buffet](https://github.com/CAU-OSS-2019/webuffet).
+![Getting started](./img/webuffet_banner.png)  
+  
+  
+# API server for [web buffet](https://github.com/CAU-OSS-2019/webuffet).
 
 ## Core features
 
