@@ -1,7 +1,7 @@
 ![Getting started](./img/webuffet_banner.png)  
   
   
-# [WEBbuffet](https://github.com/CAU-OSS-2019/webuffet) API server
+# [WEBuffet](https://github.com/CAU-OSS-2019/webuffet) API server
 
 ## Core features
 
