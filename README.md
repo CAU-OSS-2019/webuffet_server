@@ -11,4 +11,4 @@
 
 - API for theme community
   - User can save theme to server. It can help to immediately use saved theme in another pc/laptop.  
-  - Users can check, evaluate, and download themes registered by another users.
+  - Users can check, evaluate, and download themes uploaded by another users.
