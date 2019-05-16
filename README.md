@@ -5,10 +5,9 @@
 
 ## Core features
 
-- OAuth authentication
-  - User can conveniently login to our server.
-  - Server recognize users, so we can save and load user data.  
+- User identification
+  - We identify our user by unique identifier and email which are provided by chrome identity API.
 
-- API for theme market
-  - User can save theme to server. It can help to immediately use saved theme in another pc/laptop.  
-  - Users can check, evaluate, and download themes uploaded by another users.
+- Theme market
+  - You can save theme to server. It can help to immediately use saved theme in another pc/laptop.  
+  - Also You can upload theme to market. It makes to users can check, evaluate, and download each other's themes.
