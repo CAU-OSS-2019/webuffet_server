@@ -1,7 +1,9 @@
-# [WEBuffet](https://github.com/CAU-OSS-2019/webuffet) API server
-
-
 ![Getting started](./img/webuffet_market_banner.png)
+
+
+# WEBuffet API server
+
+See our [WEBuffet](https://github.com/CAU-OSS-2019/webuffet) repository.
 
 
 ## Core features
