@@ -1,7 +1,7 @@
-![Getting started](./img/webuffet_market_banner.png)  
-  
-  
 # [WEBuffet](https://github.com/CAU-OSS-2019/webuffet) API server
+
+
+![Getting started](./img/webuffet_market_banner.png)
 
 
 ## Core features
@@ -23,50 +23,14 @@ Our API server host name is http://api.webuffet.net
 
 ### Storage service
 
-#### - <code>GET storage/:user_id</code>
+- <code>GET</code> /storage/:user_id
 
-**Description:**  
-Load all theme of the user
+- <code>GET</code> /storage/:user_id/:theme_id
 
-**Return:**
-All theme id, title and thumbnail
+- <code>POST</code> /storage/:user_id
 
-#### - <code>GET /storage/:user_id/:theme_id</code>
+- <code>PUT</code> /storage/:user_id/:theme_id
 
-**Description:**  
-Load specific theme of the user
+- <code>DELETE</code> /storage/:user_id
 
-**Return:**
-Specific theme data
-
-#### - <code>POST /storage/:user_id</code>
-
-**Description:**  
-Save new theme of the user
-
-**Return:**
-Created theme id
-
-#### - <code>PUT /storage/:user_id/:theme_id</code>
-
-**Description:**  
-Update specific theme changes of the user
-
-**Return:**
-> None
-
-#### - <code>DELETE /storage/:user_id</code>
-
-**Description:**  
-Delete all theme of the user
-
-**Return:**
-> None
-
-#### - <code>DELETE /storage/:user_id/:theme_id</code>
-
-**Description:**  
-Delete specific theme of the user
-
-**Return:**
-> None
+- <code>DELETE</code> /storage/:user_id/:theme_id
