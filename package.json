@@ -7,7 +7,8 @@
     "build:watch": "npx webpack --watch --config webpack.config.js",
     "build:prod": "npx webpack --config webpack.prod.js",
     "build:prod:watch": "npx webpack --watch --config webpack.prod.js",
-    "start": "node app.js"
+    "start": "forever start ./forever.json",
+    "stop": "forever stop webuffet_server"
   },
   "repository": {
     "type": "git",
@@ -16,22 +17,26 @@
   "author": "webuffet",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.3",
-    "ejs": "^2.5.2",
-    "errorhandler": "^1.4.3",
+    "app-root-path": "^2.2.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
-    "express-error-handler": "^1.1.0",
-    "express-session": "^1.14.2",
-    "googleapis": "^39.2.0",
-    "mongoose": "^4.6.6",
-    "passport": "^0.3.2",
-    "passport-facebook": "^2.1.1",
-    "passport-google-oauth": "^1.0.0",
-    "passport-local": "^1.0.0",
-    "passport-naver": "^1.0.6",
-    "passport-twitter": "^1.0.4",
-    "serve-static": "^1.11.2"
+    "forever": "^1.0.0",
+    "mongoose": "^5.5.8",
+    "vhost": "^3.0.2",
+    "webpack-node-externals": "^1.7.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
   }
 }

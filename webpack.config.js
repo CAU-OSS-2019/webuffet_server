@@ -4,7 +4,7 @@ module.exports = {
   target: "node",
   externals: [nodeExternals()],
   entry: {
-    'webuffet.server': ['/src/app.js']
+    'webuffet.server': ['babel-polyfill', './src/app.js']
   },
   mode: 'development',
   devtool: 'inline-source-map',

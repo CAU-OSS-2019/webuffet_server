@@ -1,0 +1,7 @@
+{
+   "uid": "webuffet_server",
+   "append": true,
+   "watch": false,
+   "script": "./build/webuffet.server.built.js",
+   "sourceDir": "./"
+}
