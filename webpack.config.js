@@ -15,7 +15,10 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
     alias: {
-      
+      Configs: __dirname + '/src/configs',
+      Routes: __dirname + '/src/routes',
+
+      Provider: __dirname + '/src/app/provider'
     }
   },
   module: {
