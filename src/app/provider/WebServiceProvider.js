@@ -1,11 +1,14 @@
 import express from 'express';
+import ServiceProvider from './ServiceProvider';
 import { router } from 'Routes/web';
 
-export default class WebServiceProvider {
-  static boot() {
-    const app = express();
-    app.use(router);
+export default class WebServiceProvider extends ServiceProvider {
+  boot() {
+    this.app = express();
+    this.app.use(router);
+  }
 
-    return app;
+  getService() {
+    return this.app;
   }
 }
