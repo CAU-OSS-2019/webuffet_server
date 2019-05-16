@@ -26,17 +26,17 @@ Our API server host name is http://api.webuffet.net
 
 ### Storage service
 
-- <code>GET</code> /storage/:user_id
+- [<code>GET</code> /storage/:user_id](./API_DOCUMENT/storage/GET_storage_user_id.md)
 
-- <code>GET</code> /storage/:user_id/:theme_id
+- [<code>GET</code> /storage/:user_id/:theme_id](./API_DOCUMENT/storage/GET_storage_user_id_theme_id.md)
 
-- <code>POST</code> /storage/:user_id
+- [<code>POST</code> /storage/:user_id](./API_DOCUMENT/storage/POST_storage_user_id.md)
 
-- <code>PUT</code> /storage/:user_id/:theme_id
+- [<code>PUT</code> /storage/:user_id/:theme_id](./API_DOCUMENT/storage/PUT_storage_user_id_theme_id.md)
 
-- <code>DELETE</code> /storage/:user_id
+- [<code>DELETE</code> /storage/:user_id](./API_DOCUMENT/storage/DELETE_storage_user_id.md)
 
-- <code>DELETE</code> /storage/:user_id/:theme_id
+- [<code>DELETE</code> /storage/:user_id/:theme_id](./API_DOCUMENT/storage/DELETE_storage_user_id_theme_id.md)
 
 
 ### Market service
