@@ -1,10 +1,20 @@
 {
-  "name": "WBF_Server",
-  "version": "0.0.1",
-  "private": true,
+  "name": "webuffet-server",
+  "version": "1.0.0",
+  "description": "API for webuffet theme market",
   "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "build:watch": "npx webpack --watch --config webpack.config.js",
+    "build:prod": "npx webpack --config webpack.prod.js",
+    "build:prod:watch": "npx webpack --watch --config webpack.prod.js",
     "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CAU-OSS-2019/webuffet_server.git"
+  },
+  "author": "webuffet",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "connect-flash": "^0.1.1",
