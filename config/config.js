@@ -25,5 +25,6 @@ module.exports = {
 		clientSecret: '0000',
 		callbackURL: '/auth/google/callback',
 		profileFields : ['id','displayName', 'email']
-	}
+	},
+	jsonrpc_api_path: '/api'  //json_rpc path
 }

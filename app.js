@@ -31,6 +31,11 @@ var database = require('./database/database');
 // 모듈로 분리한 라우팅 파일 불러오기
 var route_loader = require('./routes/route_loader');
 
+// JsonRpc 핸들러 로딩을 위한 파일 불러오기
+var handler_loader = require('./handlers/handler_loader');
+
+// JsonRpc 사용을 위한 jayson 모듈 불러오기
+var jayson = require('jayson');
  
 
 
@@ -91,7 +96,11 @@ configPassport(app, passport);
 var userPassport = require('./routes/user_passport');
 userPassport(router, passport);
 
+//JSON-RPC 핸들러 정보를 읽어들여 핸들러 설정
+var jsonrpc_api_path = config.jsonrpc_api_path || '/api';
+handler_loader.init(jayson, app, jsonrpc_api_path);
 
+console.log('JSON-RPC를 [' + jsonrpc_api_path + '] 패스에서 사용하도록 설정함.');
 
 //===== 404 에러 페이지 처리 =====//
 var errorHandler = expressErrorHandler({
