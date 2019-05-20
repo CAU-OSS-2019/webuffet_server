@@ -18,6 +18,7 @@ module.exports = {
       Configs: __dirname + '/src/configs',
       Routes: __dirname + '/src/routes',
 
+      DB: __dirname + '/src/app/db',
       Provider: __dirname + '/src/app/provider'
     }
   },
