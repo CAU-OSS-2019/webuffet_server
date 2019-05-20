@@ -3,12 +3,14 @@ import ServiceProvider from './ServiceProvider';
 import { router } from 'Routes/web';
 
 export default class WebServiceProvider extends ServiceProvider {
-  boot() {
+  constructor() {
+    super();
     this.app = express();
-    this.app.use(router);
   }
 
-  getService() {
+  boot() {
+    this.app.use(router);
+    
     return this.app;
   }
 }

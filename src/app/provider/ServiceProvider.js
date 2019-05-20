@@ -13,11 +13,4 @@ export default class ServiceProvider {
   boot() {
     throw new Error("You have to implement the method 'boot'");
   }
-
-  /**
-   * @abstarct
-   */
-  getService() {
-    throw new Error("You have to implement the method 'getService'");
-  }
 }
