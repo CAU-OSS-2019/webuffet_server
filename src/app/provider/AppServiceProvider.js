@@ -12,8 +12,8 @@ export default class AppServiceProvider extends ServiceProvider {
     this.app = express();
   }
 
-  async boot() {
-    await this.dbServiceProvider.boot();
+  boot() {
+    this.dbServiceProvider.boot();  // asynchronous
     const web_service = this.webServiceProvider.boot();
 
     this.app.use(cors());
