@@ -24,18 +24,20 @@ Load all themes of the user.
 All theme list
 
 ```JSON
-[
+{
   "err": false,
-  {
-    "id": "String",
-    "url": "String",
-    "style_data": "Nested JSON",
-    "title": "String"
-  },
-  .
-  .
-  .
-]
+  "themes": [
+   {
+     "id": "String",
+     "url": "String",
+     "style_data": "Nested JSON",
+     "title": "String"
+   },
+   .
+   .
+   .
+  ]
+}
 ```
 
 ## Error response
