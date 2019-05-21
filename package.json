@@ -1,0 +1,43 @@
+{
+  "name": "webuffet-server",
+  "version": "1.0.0",
+  "description": "API for webuffet theme market",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "build:watch": "npx webpack --watch --config webpack.config.js",
+    "build:prod": "npx webpack --config webpack.prod.js",
+    "build:prod:watch": "npx webpack --watch --config webpack.prod.js",
+    "start": "forever start ./forever.json",
+    "stop": "forever stop webuffet_server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CAU-OSS-2019/webuffet_server.git"
+  },
+  "author": "webuffet",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^2.2.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "forever": "^1.0.0",
+    "mongoose": "^5.5.8",
+    "vhost": "^3.0.2",
+    "webpack-node-externals": "^1.7.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.16.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
