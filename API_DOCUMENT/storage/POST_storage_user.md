@@ -12,11 +12,11 @@ Save new theme of the user.
 
 ```JSON
 {
-  *user: {
-    *id: String,
-    *email: String
+  *"user": {
+    *"id": "String",
+    *"email": "String"
   },
-  *theme_url: String
+  *"theme_url": "String"
 }
 ```
 
@@ -26,8 +26,8 @@ Created theme id
 
 ```JSON
 {
-  err: false,
-  theme_id: String
+  "err": false,
+  "theme_id": "String"
 }
 ```
 
@@ -35,7 +35,7 @@ Created theme id
 
 ```JSON
 {
-  err: true,
-  msg: String
+  "err": true,
+  "msg": "String"
 }
 ```

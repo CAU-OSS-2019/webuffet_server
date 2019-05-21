@@ -12,14 +12,14 @@ Update specific theme.
 
 ```JSON
 {
-  *user: {
-    *id: String,
-    *email: String
+  *"user": {
+    *"id": "String",
+    *"email": "String"
   },
-  *theme: {
-    *id: String,
-    style_data: Nested JSON,
-    title: String
+  *"theme": {
+    *"id": "String",
+    "style_data": "Nested JSON",
+    "title": "String"
   }
 }
 ```
@@ -28,7 +28,7 @@ Update specific theme.
 
 ```JSON
 {
-  err: false
+  "err": false
 }
 ```
 
@@ -36,7 +36,7 @@ Update specific theme.
 
 ```JSON
 {
-  err: true,
-  msg: String
+  "err": true,
+  "msg": "String"
 }
 ```

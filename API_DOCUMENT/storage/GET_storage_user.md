@@ -12,9 +12,9 @@ Load all themes of the user.
 
 ```JSON
 {
-  *user: {
-    *id: String,
-    *email: String
+  *"user": {
+    *"id": "String",
+    *"email": "String"
   }
 }
 ```
@@ -25,12 +25,12 @@ All theme list
 
 ```JSON
 [
-  err: false,
+  "err": false,
   {
-    id: String,
-    url: String,
-    style_data: Nested JSON,
-    title: String
+    "id": "String",
+    "url": "String",
+    "style_data": "Nested JSON",
+    "title": "String"
   },
   .
   .
@@ -42,7 +42,7 @@ All theme list
 
 ```JSON
 {
-  err: true,
-  msg: String
+  "err": true,
+  "msg": "String"
 }
 ```

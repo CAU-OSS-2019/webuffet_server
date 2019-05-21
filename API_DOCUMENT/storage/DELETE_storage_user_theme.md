@@ -12,11 +12,11 @@ Delete specific theme.
 
 ```JSON
 {
-  *user: {
-    *id: String,
-    *email: String
+  *"user": {
+    *"id": "String",
+    *"email": "String"
   },
-  *theme_id: String
+  *"theme_id": "String"
 }
 ```
 
@@ -24,7 +24,7 @@ Delete specific theme.
 
 ```JSON
 {
-  err: false
+  "err": false
 }
 ```
 
@@ -32,7 +32,7 @@ Delete specific theme.
 
 ```JSON
 {
-  err: true,
-  msg: String
+  "err": true,
+  "msg": "String"
 }
 ```
