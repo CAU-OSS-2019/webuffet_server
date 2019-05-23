@@ -6,15 +6,22 @@ export default class ThemeListMiddleware {
    * 
    * @param { JSON } user_info
    * 
-   * @return { Promise }  Resolved theme list or error
+   * @return { Promise }  Theme list
    */
   async getList(user_info) {
     const user = await UserController.findAndRegister(user_info);
 
-    user.themes.forEach((theme) => {
-      delete theme._id;
-    });
+    const theme_list = [];
 
-    return Promise.resolve(user.themes);
+    user.themes.forEach((theme) => {
+      theme_list.push({
+        id: theme._id,
+        url: theme.url,
+        style_data: theme.style_data,
+        title: theme.title
+      });
+    });
+    
+    return Promise.resolve(theme_list);
   }
 }

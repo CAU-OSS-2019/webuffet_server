@@ -6,7 +6,7 @@ export default class UserController {
    * 
    * @param { JSON } user_info
    * 
-   * @return { Promise }  Resolved user doc or error
+   * @return { Promise }  User doc or error
    */
   static async findAndRegister(user_info) {
     if (!user_info.hasOwnProperty('id') || !user_info.hasOwnProperty('email')) {
