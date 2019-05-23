@@ -6,10 +6,9 @@ export default class UserController {
    * 
    * @param { JSON } user_info
    * 
-   * @return { Promise }  Resolved user doc or error message
+   * @return { Promise }  Resolved user doc or error
    */
   static async findAndRegister(user_info) {
-    // check parameter validity
     if (!user_info.hasOwnProperty('id') || !user_info.hasOwnProperty('email')) {
       return Promise.reject("invalid parameter");
     }
@@ -21,7 +20,7 @@ export default class UserController {
         { upsert: true, new: true }
       );
 
-      return user;
+      return Promise.resolve(user);
     } catch (err) {
       return Promise.reject("cannot register the user");
     }
