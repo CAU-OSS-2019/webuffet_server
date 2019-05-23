@@ -10,6 +10,7 @@ export default class DBConnector {
     });
 
     await mongoose.connect(db_config.uri, {
+      useCreateIndex: true,
       useNewUrlParser: true
     });
   
@@ -19,5 +20,7 @@ export default class DBConnector {
         process.exit(0);
       });
     });
+
+    return Promise.resolve();
   }
 }

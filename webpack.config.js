@@ -16,9 +16,12 @@ module.exports = {
     extensions: ['.js'],
     alias: {
       Configs: __dirname + '/src/configs',
+      Database: __dirname + '/src/database',
       Routes: __dirname + '/src/routes',
 
+      Controller: __dirname + '/src/app/controller',
       DB: __dirname + '/src/app/db',
+      Middleware: __dirname + '/src/app/middleware',
       Provider: __dirname + '/src/app/provider'
     }
   },

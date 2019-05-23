@@ -9,5 +9,7 @@ export default class DBServiceProvider extends ServiceProvider {
 
   async boot() {
     await this.dbConnector.connect();
+    
+    return Promise.resolve();
   }
 }
