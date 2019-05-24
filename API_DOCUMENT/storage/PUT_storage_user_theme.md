@@ -18,6 +18,7 @@ Update specific theme.
   },
   *"theme": {
     *"id": "String",
+    "url": "String",
     "style_data": "Nested JSON",
     "title": "String"
   }
