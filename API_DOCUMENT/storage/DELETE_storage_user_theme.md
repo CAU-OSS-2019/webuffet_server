@@ -1,10 +1,10 @@
 ## Request
 
-<code>POST</code> /storage/:user_id
+<code>DELETE</code> /storage/user/theme
 
 ## Description
 
-Save new theme of the user.
+Delete specific theme.
 
 ## Data params
 
@@ -16,18 +16,15 @@ Save new theme of the user.
     *"id": "String",
     *"email": "String"
   },
-  *"theme_url": "String"
+  *"theme_id": "String"
 }
 ```
 
 ## Success response
 
-Created theme id
-
 ```JSON
 {
-  "err": false,
-  "theme_id": "String"
+  "err": false
 }
 ```
 

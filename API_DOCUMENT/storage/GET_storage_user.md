@@ -1,6 +1,6 @@
 ## Request
 
-<code>GET</code> /storage/:user_id
+<code>GET</code> /storage/user
 
 ## Description
 
