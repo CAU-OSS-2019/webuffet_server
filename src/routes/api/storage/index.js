@@ -6,7 +6,7 @@ import ThemeUpdateMiddleware from 'Middleware/ThemeUpdateMiddleware';
 const router = express.Router();
 
 // load all themes of the user
-router.get('/storage/user', async (req, res) => {
+router.get('/user', async (req, res) => {
   const req_json = req.body;
   const middleware = new ThemeListMiddleware();
 
@@ -24,7 +24,7 @@ router.get('/storage/user', async (req, res) => {
 });
 
 // save new theme
-router.post('/storage/user', async (req, res) => {
+router.post('/user', async (req, res) => {
   const req_json = req.body;
   const middleware = new ThemeCreateMiddleware();
 
@@ -42,7 +42,7 @@ router.post('/storage/user', async (req, res) => {
 });
 
 // update specific theme
-router.put('/storage/user/theme', async (req, res) => {
+router.put('/user/theme', async (req, res) => {
   const req_json = req.body;
   const middleware = new ThemeUpdateMiddleware();
 
@@ -64,4 +64,4 @@ router.get('*', (req, res) => {
   res.status(404).json({ err: true, msg: "invalid request" });
 });
 
-export { router };
+export default router;

@@ -23,7 +23,7 @@ export default class AppServiceProvider extends ServiceProvider {
 
     this.app.use(cors());
     this.app.use(vhost("api." + server_config.base_uri, api_service));
-    this.app.use('/', web_service);
+    this.app.use(web_service);
 
     return this.app;
   }

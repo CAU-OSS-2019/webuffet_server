@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import ServiceProvider from './ServiceProvider';
-import { router } from 'Routes/api';
+import api_router from 'Routes/api/index';
 
 export default class APIServiceProvider extends ServiceProvider {
   constructor() {
@@ -12,7 +12,7 @@ export default class APIServiceProvider extends ServiceProvider {
   boot() {
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(bodyParser.json());
-    this.app.use(router);
+    this.app.use(api_router);
 
     return this.app;
   }
