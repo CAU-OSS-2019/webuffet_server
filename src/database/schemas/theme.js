@@ -6,19 +6,13 @@
  */
 
 import mongoose from 'mongoose';
- 
+
 const themeSchema = new mongoose.Schema({
-<<<<<<< HEAD
-  url: { type: String, required: true },            // url of customized website
-  style_data: { type: mongoose.Schema.Types.Mixed },     // customized style data
-  title: { type: String },
-  thumbnail: { type: String },                      // path of thumbnail image file
-=======
   url: { type: String, required: true },    // url of customized website
   style_data: { type: mongoose.Schema.Types.Mixed },    // customized style data
   title: { type: String },
-  thumbnail: { type: String },  // path of thumbnail image file
->>>>>>> api
+  edited_date: { type: Date, default: Date.now, required: true },  // last edited date
+  thumbnail: { type: String }  // path of thumbnail image file
 });
 
 export default themeSchema;

@@ -6,4 +6,4 @@ router.get('*', (req, res) => {
   res.redirect("https://github.com/CAU-OSS-2019/webuffet");
 });
 
-export { router };
+export default router;

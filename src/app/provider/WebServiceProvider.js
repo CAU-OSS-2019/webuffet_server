@@ -1,6 +1,6 @@
 import express from 'express';
 import ServiceProvider from './ServiceProvider';
-import { router } from 'Routes/web';
+import web_router from 'Routes/web/index';
 
 export default class WebServiceProvider extends ServiceProvider {
   constructor() {
@@ -9,7 +9,7 @@ export default class WebServiceProvider extends ServiceProvider {
   }
 
   boot() {
-    this.app.use(router);
+    this.app.use(web_router);
     
     return this.app;
   }
