@@ -1,3 +1,7 @@
+/**
+ * Router for https://api.webuffet.net
+ */
+
 import express from 'express';
 import storage_router from './storage/index';
 

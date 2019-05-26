@@ -1,3 +1,7 @@
+/**
+ * Router for https://webuffet.net
+ */
+
 import express from 'express';
 
 const router = express.Router();

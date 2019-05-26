@@ -1,3 +1,7 @@
+/**
+ * Router for https://api.webuffet.net/storage
+ */
+
 import express from 'express';
 import ThemeListMiddleware from 'Middleware/ThemeListMiddleware';
 import ThemeCreateMiddleware from 'Middleware/ThemeCreateMiddleware';
