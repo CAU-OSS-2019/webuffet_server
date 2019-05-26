@@ -36,7 +36,7 @@ export default class ThemeUpdateMiddleware {
       { $set: { "themes.$": theme_info } }
     );
 
-    if (result.n === 0) {   // if theme is not found
+    if (result.n === 0) {   // if theme is not exist
       return Promise.reject("nonexistent theme id");
     }
 

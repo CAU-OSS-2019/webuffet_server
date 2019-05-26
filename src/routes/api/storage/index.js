@@ -6,6 +6,7 @@ import express from 'express';
 import ThemeListMiddleware from 'Middleware/ThemeListMiddleware';
 import ThemeCreateMiddleware from 'Middleware/ThemeCreateMiddleware';
 import ThemeUpdateMiddleware from 'Middleware/ThemeUpdateMiddleware';
+import ThemeDeleteMiddleware from 'Middleware/ThemeDeleteMiddleware';
 
 const router = express.Router();
 
@@ -55,6 +56,24 @@ router.put('/user/theme', async (req, res) => {
   } else {
     try {
       await middleware.update(req_json.auth, req_json.theme);
+
+      res.json({ err: false });
+    } catch (err) {
+      res.json({ err: true, msg: err });
+    }
+  }
+});
+
+// delete specific theme
+router.delete('/user/theme', async (req, res) => {
+  const req_json = req.body;
+  const middleware = new ThemeDeleteMiddleware();
+
+  if (!req_json.hasOwnProperty('auth') || !req_json.hasOwnProperty('theme_id')) {
+    res.json({ err: true, msg: "invalid parameter" });
+  } else {
+    try {
+      await middleware.delete(req_json.auth, req_json.theme_id);
 
       res.json({ err: false });
     } catch (err) {
