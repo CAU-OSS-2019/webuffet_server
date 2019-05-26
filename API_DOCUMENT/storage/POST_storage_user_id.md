@@ -1,10 +1,10 @@
 ## Request
 
-<code>PUT</code> /storage/user/theme
+<code>POST</code> /storage/:user_id
 
 ## Description
 
-Update specific theme.
+Save new theme of the user.
 
 ## Data params
 
@@ -12,24 +12,22 @@ Update specific theme.
 
 ```JSON
 {
-  *"user": {
+  *"auth": {
     *"id": "String",
     *"email": "String"
   },
-  *"theme": {
-    *"id": "String",
-    "url": "String",
-    "style_data": "Nested JSON",
-    "title": "String"
-  }
+  *"theme_url": "String"
 }
 ```
 
 ## Success response
 
+Created theme id
+
 ```JSON
 {
-  "err": false
+  "err": false,
+  "theme_id": "String"
 }
 ```
 

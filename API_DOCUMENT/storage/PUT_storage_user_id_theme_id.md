@@ -1,10 +1,10 @@
 ## Request
 
-<code>DELETE</code> /storage/user/theme
+<code>PUT</code> /storage/:user_id/:theme_id
 
 ## Description
 
-Delete specific theme.
+Update specific theme.
 
 ## Data params
 
@@ -12,11 +12,15 @@ Delete specific theme.
 
 ```JSON
 {
-  *"user": {
+  *"auth": {
     *"id": "String",
     *"email": "String"
   },
-  *"theme_id": "String"
+  *"theme": {
+    "url": "String",
+    "style_data": "Nested JSON",
+    "title": "String"
+  }
 }
 ```
 

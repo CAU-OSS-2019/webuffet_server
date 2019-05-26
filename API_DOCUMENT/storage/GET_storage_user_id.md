@@ -1,6 +1,6 @@
 ## Request
 
-<code>GET</code> /storage/user
+<code>GET</code> /storage/:user_id
 
 ## Description
 
@@ -12,7 +12,7 @@ Load all themes of the user.
 
 ```JSON
 {
-  *"user": {
+  *"auth": {
     *"id": "String",
     *"email": "String"
   }

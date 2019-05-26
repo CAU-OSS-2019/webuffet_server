@@ -27,13 +27,13 @@ Our API server is https://api.webuffet.net
 
 ### Storage service
 
-- [<code>GET</code> /storage/user](./API_DOCUMENT/storage/GET_storage_user.md)
+- [<code>GET</code> /storage/user](./API_DOCUMENT/storage/GET_storage_user_id.md)
 
-- [<code>POST</code> /storage/user](./API_DOCUMENT/storage/POST_storage_user.md)
+- [<code>POST</code> /storage/user](./API_DOCUMENT/storage/POST_storage_user_id.md)
 
-- [<code>PUT</code> /storage/user/theme](./API_DOCUMENT/storage/PUT_storage_user_theme.md)
+- [<code>PUT</code> /storage/user/theme](./API_DOCUMENT/storage/PUT_storage_user_id_theme_id.md)
 
-- [<code>DELETE</code> /storage/user/theme](./API_DOCUMENT/storage/DELETE_storage_user_theme.md)
+- [<code>DELETE</code> /storage/user/theme](./API_DOCUMENT/storage/DELETE_storage_user_id_theme_id.md)
 
 
 ### Market service
