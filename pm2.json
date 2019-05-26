@@ -1,0 +1,7 @@
+{
+  "apps": [{
+    "name": "webuffet",
+    "script": "./build/webuffet.server.built.js",
+    "watch": true
+  }]
+}
