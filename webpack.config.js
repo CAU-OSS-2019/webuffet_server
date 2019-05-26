@@ -19,7 +19,7 @@ module.exports = {
       Database: __dirname + '/src/database',
       Routes: __dirname + '/src/routes',
 
-      Controller: __dirname + '/src/app/controller',
+      Auth: __dirname + '/src/app/auth',
       DB: __dirname + '/src/app/db',
       Middleware: __dirname + '/src/app/middleware',
       Provider: __dirname + '/src/app/provider'
