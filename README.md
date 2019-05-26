@@ -20,8 +20,9 @@ See our [WEBuffet](https://github.com/CAU-OSS-2019/webuffet) repository.
 
 ## API document
 
-Our API server is http://api.webuffet.net  
+Our API server is https://api.webuffet.net  
 > Not yet supported (2019.05.16)
+> Partially supported (2019.05.26)
 
 
 ### Storage service
