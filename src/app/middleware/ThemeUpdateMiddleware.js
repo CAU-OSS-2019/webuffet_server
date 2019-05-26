@@ -1,17 +1,22 @@
-import UserController from 'Controller/UserController';
+import Authenticator from 'Auth/Authenticator';
 import User from 'Database/models/user';
 
 export default class ThemeUpdateMiddleware {
   /**
    * Update a theme.
    * 
-   * @param { JSON } user_info
+   * @param { JSON } auth
    * @param { JSON } theme_info
    * 
    * @return { Promise }
    */
-  async update(user_info, theme_info) {
-    const user = await UserController.findAndRegister(user_info);
+  async update(auth, theme_info) {
+    const authenticator = new Authenticator();
+
+    if (false === await authenticator.isValid(auth)) {
+      return Promise.reject("invalid auth");
+    }
+    const user = authenticator.getUser();
 
     if (!theme_info.hasOwnProperty('id')) {
       return Promise.reject("invalid parameter");
@@ -31,7 +36,7 @@ export default class ThemeUpdateMiddleware {
       { $set: { "themes.$": theme_info } }
     );
 
-    if (result.n === 0) {   // if theme is not found
+    if (result.n === 0) {   // if theme is not exist
       return Promise.reject("nonexistent theme id");
     }
 

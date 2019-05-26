@@ -1,18 +1,22 @@
-import UserController from 'Controller/UserController';
+import Authenticator from 'Auth/Authenticator';
 
 export default class ThemeListMiddleware {
   /**
    * Load all themes of the user.
    * 
-   * @param { JSON } user_info
+   * @param { JSON } auth
    * 
    * @return { Promise }  Theme list
    */
-  async getList(user_info) {
-    const user = await UserController.findAndRegister(user_info);
+  async getList(auth) {
+    const authenticator = new Authenticator();
 
+    if (false === await authenticator.isValid(auth)) {
+      return Promise.reject("invalid auth");
+    }
+    const user = authenticator.getUser();
+    
     const theme_list = [];
-
     user.themes.forEach((theme) => {
       theme_list.push({
         id: theme._id,
