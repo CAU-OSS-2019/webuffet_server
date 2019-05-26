@@ -1,5 +1,5 @@
 const server_config = {
-  base_uri: 'test.local',
+  base_uri: 'webuffet.net',
   port: 3000
 };
 
