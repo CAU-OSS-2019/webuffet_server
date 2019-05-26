@@ -14,11 +14,11 @@ router.get('/user', async (req, res) => {
   const req_json = req.body;
   const middleware = new ThemeListMiddleware();
 
-  if (!req_json.hasOwnProperty('user')) {
+  if (!req_json.hasOwnProperty('auth')) {
     res.json({ err: true, msg: "invalid parameter" });
   } else {
     try {
-      const theme_list = await middleware.getList(req_json.user);
+      const theme_list = await middleware.getList(req_json.auth);
 
       res.json({ err: false, themes: theme_list });
     } catch (err) {
@@ -32,11 +32,11 @@ router.post('/user', async (req, res) => {
   const req_json = req.body;
   const middleware = new ThemeCreateMiddleware();
 
-  if (!req_json.hasOwnProperty('user') || !req_json.hasOwnProperty('theme_url')) {
+  if (!req_json.hasOwnProperty('auth') || !req_json.hasOwnProperty('theme_url')) {
     res.json({ err: true, msg: "invalid parameter" });
   } else {
     try {
-      const created_theme_id = await middleware.create(req_json.user, req_json.theme_url);
+      const created_theme_id = await middleware.create(req_json.auth, req_json.theme_url);
 
       res.json({ err: false, theme_id: created_theme_id });
     } catch (err) {
@@ -50,11 +50,11 @@ router.put('/user/theme', async (req, res) => {
   const req_json = req.body;
   const middleware = new ThemeUpdateMiddleware();
 
-  if (!req_json.hasOwnProperty('user') || !req_json.hasOwnProperty('theme')) {
+  if (!req_json.hasOwnProperty('auth') || !req_json.hasOwnProperty('theme')) {
     res.json({ err: true, msg: "invalid parameter" });
   } else {
     try {
-      await middleware.update(req_json.user, req_json.theme);
+      await middleware.update(req_json.auth, req_json.theme);
 
       res.json({ err: false });
     } catch (err) {
