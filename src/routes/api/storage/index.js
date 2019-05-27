@@ -3,6 +3,7 @@
  */
 
 import express from 'express';
+import upload from 'Configs/upload';
 import ThemeListMiddleware from 'Middleware/ThemeListMiddleware';
 import ThemeCreateMiddleware from 'Middleware/ThemeCreateMiddleware';
 import ThemeUpdateMiddleware from 'Middleware/ThemeUpdateMiddleware';
@@ -44,6 +45,20 @@ router.post('/user', async (req, res) => {
       res.json({ err: true, msg: err });
     }
   }
+});
+
+router.post('/thumbnail', (req, res) => {
+  upload(req, res, (err) => {
+    if (err) {
+      res.json({ err: true, msg: err.message });
+    } else {
+      if (req.fileValidationError) {
+        res.json({ err: true, msg: req.fileValidationError });
+      } else {
+        res.json(req.file);
+      }
+    }
+  });
 });
 
 // update specific theme
