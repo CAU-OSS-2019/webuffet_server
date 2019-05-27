@@ -32,7 +32,8 @@ All theme list
      "url": "String",
      "style_data": "Nested JSON",
      "title": "String",
-     "edited_date": "Date"
+     "edited_date": "Date",
+     "thumbnail": "String"
    },
    .
    .
