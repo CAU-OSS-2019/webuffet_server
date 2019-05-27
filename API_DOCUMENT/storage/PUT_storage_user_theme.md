@@ -20,7 +20,8 @@ Update specific theme.
     *"id": "String",
     "url": "String",
     "style_data": "Nested JSON",
-    "title": "String"
+    "title": "String",
+    "thumbnail": "String"
   }
 }
 ```
