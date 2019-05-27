@@ -12,7 +12,7 @@ const themeSchema = new mongoose.Schema({
   style_data: { type: mongoose.Schema.Types.Mixed },    // customized style data
   title: { type: String },
   edited_date: { type: Date, default: Date.now, required: true },  // last edited date
-  thumbnail: { type: String }  // path of thumbnail image file
+  thumbnail: { type: String }  // url of thumbnail image file
 });
 
 export default themeSchema;
