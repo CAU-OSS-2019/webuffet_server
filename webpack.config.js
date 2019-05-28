@@ -13,7 +13,7 @@ module.exports = {
     filename: '[name].built.js'
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.ts'],
     alias: {
       Configs: __dirname + '/src/configs',
       Database: __dirname + '/src/database',
@@ -40,7 +40,20 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: [/\.tsx?$/],
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          },
+          'ts-loader'
+        ]
+      },
     ]
   }
 }

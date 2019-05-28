@@ -2,6 +2,14 @@ import Authenticator from 'Auth/Authenticator';
 import User from 'Database/models/user';
 
 export default class ThemeDeleteMiddleware {
+  /**
+   * Delete a theme.
+   * 
+   * @param { JSON } auth
+   * @param { String } theme_id
+   * 
+   * @return { Promise }
+   */
   async delete(auth, theme_id) {
     const authenticator = new Authenticator();
 

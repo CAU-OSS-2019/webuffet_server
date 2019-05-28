@@ -10,7 +10,7 @@ const router = express.Router();
 router.use('/storage', storage_router);
 
 // invalid request
-router.get('*', (req, res) => {
+router.all('*', (req, res) => {
   res.status(404).json({ err: true, msg: "invalid request" });
 });
 

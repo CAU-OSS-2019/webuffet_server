@@ -23,7 +23,8 @@ export default class ThemeListMiddleware {
         url: theme.url,
         style_data: theme.style_data,
         title: theme.title,
-        edited_date: theme.edited_date
+        edited_date: theme.edited_date,
+        thumbnail: theme.thumbnail
       });
     });
     
