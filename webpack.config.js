@@ -4,7 +4,7 @@ module.exports = {
   target: "node",
   externals: [nodeExternals()],
   entry: {
-    'webuffet.server': ['babel-polyfill', './src/app.js']
+    'webuffet.server': ['babel-polyfill', './src/app.ts']
   },
   mode: 'development',
   devtool: 'inline-source-map',
@@ -13,7 +13,7 @@ module.exports = {
     filename: '[name].built.js'
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       Configs: __dirname + '/src/configs',
       Database: __dirname + '/src/database',

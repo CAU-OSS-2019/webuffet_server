@@ -5,7 +5,15 @@
  * @copyright 2019 WEBuffet
  */
 
-import mongoose from 'mongoose';
+import mongoose, { Document } from 'mongoose';
+
+export interface ThemeDoc extends Document {
+  url: string,
+  style_data?: object,
+  title?: string,
+  edited_date: Date,
+  thumbnail?: string
+}
 
 const themeSchema = new mongoose.Schema({
   url: { type: String, required: true },    // url of customized website

@@ -4,7 +4,7 @@ import logger from 'Configs/log';
 import { db_config } from 'Configs/database';
 
 export default class DBConnector {
-  async connect() {
+  public async connect(): Promise<void> {
     mongoose.connection.on('error', (err) => {
       logger.info("Mongoose default connection has occured " + err + " error");
     });
