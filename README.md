@@ -23,6 +23,7 @@ See our [WEBuffet](https://github.com/CAU-OSS-2019/webuffet) repository.
 Our API server is https://api.webuffet.net  
 > Not yet supported (2019.05.16)  
 > Partially supported (2019.05.26)
+> Storage service is fully supported (2019.05.30)
 
 
 ### Storage service
