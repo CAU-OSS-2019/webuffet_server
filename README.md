@@ -31,6 +31,8 @@ Our API server is https://api.webuffet.net
 
 - [<code>POST</code> /storage/user](./API_DOCUMENT/storage/POST_storage_user.md)
 
+- [<code>POST</code> /storage/user/thumbnail](./API_DOCUMENT/storage/POST_storage_user_thumbnail.md)
+
 - [<code>PUT</code> /storage/user/theme](./API_DOCUMENT/storage/PUT_storage_user_theme.md)
 
 - [<code>DELETE</code> /storage/user/theme](./API_DOCUMENT/storage/DELETE_storage_user_theme.md)

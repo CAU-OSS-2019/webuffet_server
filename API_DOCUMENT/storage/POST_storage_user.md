@@ -6,7 +6,7 @@
 
 Save new theme of the user.
 
-## Data params
+## Request body
 
 > \* : required
 

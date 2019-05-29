@@ -16,7 +16,7 @@ Upload theme thumbnail image using imgur API and return image url.
 }
 ```
 
-## Data params
+## Request body
 
 > \* : required
 

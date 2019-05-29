@@ -6,7 +6,7 @@
 
 Load all themes of the user.
 
-## Data params
+## Request body
 
 > \* : required
 

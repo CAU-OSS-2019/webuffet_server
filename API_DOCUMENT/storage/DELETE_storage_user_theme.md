@@ -6,7 +6,7 @@
 
 Delete specific theme.
 
-## Data params
+## Request body
 
 > \* : required
 
