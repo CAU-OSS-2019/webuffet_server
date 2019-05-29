@@ -7,6 +7,8 @@ import ThemeListMiddleware from 'Middleware/ThemeListMiddleware';
 import ThemeCreateMiddleware from 'Middleware/ThemeCreateMiddleware';
 import ThemeUpdateMiddleware from 'Middleware/ThemeUpdateMiddleware';
 import ThemeDeleteMiddleware from 'Middleware/ThemeDeleteMiddleware';
+import ThumbnailUploadMiddleware from 'Middleware/ThumbnailUploadMiddleware';
+import upload from 'Configs/upload';
 
 const router = express.Router();
 
@@ -80,6 +82,25 @@ router.delete('/user/theme', async (req, res) => {
       res.json({ err: true, msg: err });
     }
   }
+});
+
+// upload theme thumbnail image and return image url
+router.post('/user/thumbnail', (req, res) => {
+  const middleware = new ThumbnailUploadMiddleware();
+
+  upload(req, res, (err) => {
+    if (err) {
+      res.json({ err: true, msg: err.message });
+    } else {
+      middleware.uploadBase64(req.file.buffer.toString('base64'))
+        .then((image_url) => {
+          res.json({ err: false, url: image_url });
+        })
+        .catch((err_msg) => {
+          res.json({ err: true, msg: err_msg });
+        });
+    }
+  });
 });
 
 // invalid request

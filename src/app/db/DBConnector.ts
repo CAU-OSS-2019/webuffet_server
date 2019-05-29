@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import process from 'process';
 import logger from 'Configs/log';
-import { db_config } from 'Configs/database';
+import db_config from 'Configs/database';
 
 export default class DBConnector {
   public async connect(): Promise<void> {
