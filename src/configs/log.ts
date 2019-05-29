@@ -34,7 +34,7 @@ const options = {
   }
 };
 
-const logger = new winston.createLogger({
+const logger = winston.createLogger({
   transports: [
     new winston.transports.File(options.file)
   ],

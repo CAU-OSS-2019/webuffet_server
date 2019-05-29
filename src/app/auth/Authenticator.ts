@@ -1,24 +1,30 @@
 import User from 'Database/models/user';
+import { UserDoc } from 'Database/schemas/user';
+
+export interface Auth {
+  id: string,
+  email: string
+};
 
 export default class Authenticator {
+  private user: UserDoc;
+
   /**
    * Check if auth info is valid.
    * 
-   * @param { JSON } auth
-   * 
-   * @return { Promise }  Resolve boolean
+   * @return Resolve boolean
    */
-  async isValid(auth) {
+  public async isValid(auth: Auth): Promise<boolean> {
     if (!auth.hasOwnProperty('id') || !auth.hasOwnProperty('email')) {
       return Promise.resolve(false);
     }
 
     try {
-      this.user = await User.findOneAndUpdate(
+      this.user = <UserDoc>(await User.findOneAndUpdate(
         { account_id: auth.id, email: auth.email },
         {},
         { upsert: true, new: true }
-      );
+      ));
 
       return Promise.resolve(true);
     } catch (err) {
@@ -26,7 +32,7 @@ export default class Authenticator {
     }
   }
 
-  getUser() {
+  public getUser(): UserDoc {
     return this.user;
   }
-}
+};

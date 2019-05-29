@@ -1,16 +1,11 @@
-import Authenticator from 'Auth/Authenticator';
+import Authenticator, { Auth } from 'Auth/Authenticator';
 import User from 'Database/models/user';
 
 export default class ThemeUpdateMiddleware {
   /**
    * Update a theme.
-   * 
-   * @param { JSON } auth
-   * @param { JSON } theme_info
-   * 
-   * @return { Promise }
    */
-  async update(auth, theme_info) {
+  public async update(auth: Auth, theme_info: any): Promise<void> {
     const authenticator = new Authenticator();
 
     if (false === await authenticator.isValid(auth)) {

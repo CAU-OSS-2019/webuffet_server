@@ -1,13 +1,14 @@
 import ServiceProvider from './ServiceProvider';
 import DBConnector from 'DB/DBConnector';
 
-export default class DBServiceProvider extends ServiceProvider {
+export default class DBServiceProvider implements ServiceProvider {
+  private dbConnector: DBConnector;
+
   constructor() {
-    super();
     this.dbConnector = new DBConnector();
   }
 
-  async boot() {
+  public async boot(): Promise<void> {
     await this.dbConnector.connect();
     
     return Promise.resolve();

@@ -1,14 +1,12 @@
-import Authenticator from 'Auth/Authenticator';
+import Authenticator, { Auth } from 'Auth/Authenticator';
 
 export default class ThemeListMiddleware {
   /**
    * Load all themes of the user.
    * 
-   * @param { JSON } auth
-   * 
-   * @return { Promise }  Theme list
+   * @return { Promise }  Resolve theme list
    */
-  async getList(auth) {
+  public async getList(auth: Auth): Promise<Array<any>> {
     const authenticator = new Authenticator();
 
     if (false === await authenticator.isValid(auth)) {

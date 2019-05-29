@@ -1,16 +1,14 @@
-import Authenticator from 'Auth/Authenticator';
+import Authenticator, { Auth } from 'Auth/Authenticator';
 import User from 'Database/models/user';
+import { UserDoc } from 'Database/schemas/user';
 
 export default class ThemeCreateMiddleware {
   /**
    * Create new theme.
    * 
-   * @param { JSON } auth
-   * @param { String } theme_url
-   * 
-   * @return { Promise }  Created theme id
+   * @return Resolve created theme id
    */
-  async create(auth, theme_url) {
+  public async create(auth: Auth, theme_url: string): Promise<string> {
     const authenticator = new Authenticator();
 
     if (false === await authenticator.isValid(auth)) {
@@ -18,11 +16,11 @@ export default class ThemeCreateMiddleware {
     }
     const user = authenticator.getUser();
 
-    const updated_user = await User.findByIdAndUpdate(
+    const updated_user = <UserDoc>(await User.findByIdAndUpdate(
       user._id,
       { $push: { themes: { url: theme_url } } },
       { new: true }
-    );
+    ));
 
     return Promise.resolve(updated_user.themes[updated_user.themes.length - 1]._id);
   }
