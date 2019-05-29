@@ -2,6 +2,7 @@ node_modules
 package-lock.json
 build
 log
+src/configs/private.ts
 
 .DS_Store
 .vscode
