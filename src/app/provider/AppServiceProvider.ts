@@ -5,7 +5,7 @@ import ServiceProvider from './ServiceProvider';
 import DBServiceProvider from './DBServiceProvider';
 import APIServiceProvider from './APIServiceProvider';
 import WebServiceProvider from './WebServiceProvider';
-import { server_config } from 'Configs/server';
+import server_config from 'Configs/server';
 
 export default class AppServiceProvider implements ServiceProvider {
   private dbServiceProvider: DBServiceProvider;
