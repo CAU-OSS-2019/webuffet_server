@@ -14,14 +14,13 @@ const router = express.Router();
 
 // load all themes of the user
 router.get('/user', async (req, res) => {
-  const body = req.body;
   const middleware = new ThemeListMiddleware();
 
-  if (!body.hasOwnProperty('auth')) {
+  if (!req.body.hasOwnProperty('auth')) {
     res.json({ err: true, msg: "invalid parameter" });
   } else {
     try {
-      const theme_list = await middleware.getList(body.auth);
+      const theme_list = await middleware.getList(req.body.auth);
 
       res.json({ err: false, themes: theme_list });
     } catch (err) {
@@ -32,14 +31,13 @@ router.get('/user', async (req, res) => {
 
 // save new theme
 router.post('/user', async (req, res) => {
-  const req_json = req.body;
   const middleware = new ThemeCreateMiddleware();
 
-  if (!req_json.hasOwnProperty('auth') || !req_json.hasOwnProperty('theme_url')) {
+  if (!req.body.hasOwnProperty('auth') || !req.body.hasOwnProperty('theme_url')) {
     res.json({ err: true, msg: "invalid parameter" });
   } else {
     try {
-      const created_theme_id = await middleware.create(req_json.auth, req_json.theme_url);
+      const created_theme_id = await middleware.create(req.body.auth, req.body.theme_url);
 
       res.json({ err: false, theme_id: created_theme_id });
     } catch (err) {
@@ -50,14 +48,13 @@ router.post('/user', async (req, res) => {
 
 // update specific theme
 router.put('/user/theme', async (req, res) => {
-  const req_json = req.body;
   const middleware = new ThemeUpdateMiddleware();
 
-  if (!req_json.hasOwnProperty('auth') || !req_json.hasOwnProperty('theme')) {
+  if (!req.body.hasOwnProperty('auth') || !req.body.hasOwnProperty('theme')) {
     res.json({ err: true, msg: "invalid parameter" });
   } else {
     try {
-      await middleware.update(req_json.auth, req_json.theme);
+      await middleware.update(req.body.auth, req.body.theme);
 
       res.json({ err: false });
     } catch (err) {
@@ -68,14 +65,13 @@ router.put('/user/theme', async (req, res) => {
 
 // delete specific theme
 router.delete('/user/theme', async (req, res) => {
-  const req_json = req.body;
   const middleware = new ThemeDeleteMiddleware();
 
-  if (!req_json.hasOwnProperty('auth') || !req_json.hasOwnProperty('theme_id')) {
+  if (!req.body.hasOwnProperty('auth') || !req.body.hasOwnProperty('theme_id')) {
     res.json({ err: true, msg: "invalid parameter" });
   } else {
     try {
-      await middleware.delete(req_json.auth, req_json.theme_id);
+      await middleware.delete(req.body.auth, req.body.theme_id);
 
       res.json({ err: false });
     } catch (err) {
