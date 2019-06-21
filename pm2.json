@@ -2,6 +2,8 @@
   "apps": [{
     "name": "webuffet",
     "script": "./build/webuffet.server.built.js",
-    "watch": true
+    "watch": true,
+    "instances": 0,
+    "exec_mode": "cluster"
   }]
 }
